@@ -14,7 +14,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Aprende a dominar las líneas de tejido precisas y el montaje estructurado.",
       tags: ["Materiales y herramientas", "Tejido lineal para carteras", "Tejido con punto espiga + accesorios"],
       icon: Layers,
-      color: "bg-stone-50"
+      color: "bg-stone-50",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/44.jpg"
     },
     {
       num: "03",
@@ -22,7 +23,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Domina el conteo perfecto y las suturas invisibles en estructuras circulares.",
       tags: ["Punto bajo centrado"],
       icon: Circle,
-      color: "bg-purple-50/40"
+      color: "bg-purple-50/40",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/45.jpg"
     },
     {
       num: "04",
@@ -30,7 +32,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Desarrolla habilidades de decoración y herrajes que multiplican su valor percibido.",
       tags: ["Bolso con accesorios y detalles", "Punto bajo centrado"],
       icon: Sparkles,
-      color: "bg-fuchsia-50/40"
+      color: "bg-fuchsia-50/40",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/46.jpg"
     },
     {
       num: "05 & 06",
@@ -38,7 +41,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Experimenta con siluetas asimétricas manipulando tensiones y disminuciones.",
       tags: ["Aumentos y disminuciones", "Punto bajo"],
       icon: Scissors,
-      color: "bg-purple-50/20 select-none"
+      color: "bg-purple-50/20 select-none",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/47.jpg"
     },
     {
       num: "07",
@@ -46,7 +50,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Aprende la fusión perfecta entre la alta costura en crochet y soportes de cuero premium.",
       tags: ["Materiales y punto piña"],
       icon: Compass,
-      color: "bg-purple-50/50"
+      color: "bg-purple-50/50",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/48.jpg"
     },
     {
       num: "08",
@@ -54,7 +59,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Diseña piezas de colección que atraen a clientes de alta gama.",
       tags: ["Bolso premium con accesorios", "Materiales y herramientas necesarias"],
       icon: Gem,
-      color: "bg-stone-100"
+      color: "bg-stone-100",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/49.jpg"
     },
     {
       num: "09",
@@ -62,7 +68,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "Elabora carteras con estructura rígida impecable listas para el mercado internacional.",
       tags: ["Accesorios y cadenas", "Punto espiga con aumentos"],
       icon: ShoppingBag,
-      color: "bg-purple-100/20"
+      color: "bg-purple-100/20",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/50.jpg"
     },
     {
       num: "10",
@@ -70,7 +77,8 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       description: "El pináculo de la técnica que integra cadenas, herrajes de gala y forros internos.",
       tags: ["Cartera profesional con accesorios", "Cadenas", "Puntos básicos, aumentos y punto bajo centrado"],
       icon: Star,
-      color: "bg-purple-950 text-purple-100 shadow-purple-500/20 border-purple-800"
+      color: "bg-purple-950 text-purple-100 shadow-purple-500/20 border-purple-800",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/51-min.jpg"
     }
   ];
 
@@ -141,77 +149,90 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
                       : "0 20px 25px -5px rgba(107,33,168,0.06)"
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className={`rounded-2xl border p-6 flex flex-col justify-between shadow-sm transition-all duration-300 relative overflow-hidden group ${cardBg}`}
+                className={`rounded-2xl border flex flex-col justify-between shadow-sm transition-all duration-300 relative overflow-hidden group ${cardBg}`}
               >
-                {/* Visual watermarked number token */}
-                <span className={`absolute -top-4 -right-2 font-mono font-black text-6xl select-none pointer-events-none transition-all group-hover:scale-110 duration-300 ${
-                  isCardHighlighted 
-                    ? "text-purple-805 text-purple-800/25" 
-                    : isDarkTheme 
-                      ? "text-stone-800/30" 
-                      : "text-stone-300/30"
-                }`}>
-                  {proj.num}
-                </span>
-
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-all duration-300 group-hover:scale-110 ${iconBg}`}>
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <span className={`font-mono text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase ${
-                      isCardHighlighted 
-                        ? "bg-purple-900 text-purple-200" 
-                        : isDarkTheme
-                          ? "bg-stone-800 text-stone-300"
-                          : "bg-stone-100 text-stone-605 text-stone-600"
-                    }`}>
-                      {proj.num.includes("&") ? "Múltiple" : "Único"}
-                    </span>
-                  </div>
-
-                  <span className={`text-xs font-mono font-bold uppercase tracking-wider block mb-1 ${
-                    isCardHighlighted ? "text-purple-300" : isDarkTheme ? "text-purple-400" : "text-purple-800"
-                  }`}>
-                    Proyecto {proj.num}
-                  </span>
-                  <h3 className={`font-serif font-bold text-xl leading-tight mb-2 ${
-                    isCardHighlighted ? "text-white" : isDarkTheme ? "text-stone-100" : "text-stone-900"
-                  }`}>
-                    {proj.title}
-                  </h3>
-                  <p className={`text-sm mb-4 leading-relaxed transition-colors ${
+                {/* Product Image Wrapper */}
+                <div className="relative h-44 w-full overflow-hidden bg-stone-100 dark:bg-stone-800">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Visual watermarked number token */}
+                  <span className={`absolute top-2 right-3 font-mono font-black text-4xl select-none pointer-events-none transition-all group-hover:scale-110 duration-300 ${
                     isCardHighlighted 
-                      ? "text-purple-200/80" 
-                      : isDarkTheme
-                        ? "text-stone-400"
-                        : "text-stone-605 text-stone-600"
+                      ? "text-purple-300/30" 
+                      : isDarkTheme 
+                        ? "text-stone-700/40" 
+                        : "text-stone-300/60"
                   }`}>
-                    {proj.description}
-                  </p>
+                    {proj.num}
+                  </span>
+                  {/* Subtle edge overlay shadows */}
+                  <div className="absolute inset-0 bg-stone-900/10 mix-blend-multiply pointer-events-none" />
                 </div>
 
-                <div className={`pt-4 border-t ${isDarkTheme ? "border-stone-800" : "border-stone-200/30"}`}>
-                  <span className={`text-[10px] font-mono uppercase tracking-wider block mb-2 font-bold ${
-                    isCardHighlighted ? "text-fuchsia-300" : isDarkTheme ? "text-purple-400" : "text-purple-800"
-                  }`}>
-                    Qué vas a aprender:
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {proj.tags.map((tag, tagIdx) => (
-                      <span
-                        key={tagIdx}
-                        className={`text-[11px] leading-tight px-2 py-1 rounded font-medium transition-colors duration-300 ${
-                          isCardHighlighted 
-                            ? "bg-purple-900/50 text-purple-200 border border-purple-800/40 group-hover:bg-purple-900/80" 
-                            : isDarkTheme
-                              ? "bg-stone-800/60 text-stone-300 border border-stone-800 group-hover:bg-purple-950/40 group-hover:text-purple-200 group-hover:border-purple-900/40"
-                              : "bg-stone-100/80 text-stone-700 border border-stone-200 group-hover:bg-purple-50 group-hover:text-purple-900 group-hover:border-purple-100"
-                        }`}
-                      >
-                        {tag}
+                <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center border transition-all duration-300 group-hover:scale-110 ${iconBg}`}>
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <span className={`font-mono text-[10px] font-bold tracking-wider px-2 py-1 rounded uppercase ${
+                        isCardHighlighted 
+                          ? "bg-purple-900 text-purple-200" 
+                          : isDarkTheme
+                            ? "bg-stone-800 text-stone-300"
+                            : "bg-stone-100 text-stone-605 text-stone-600"
+                      }`}>
+                        {proj.num.includes("&") ? "Múltiple" : "Único"}
                       </span>
-                    ))}
+                    </div>
+
+                    <span className={`text-xs font-mono font-bold uppercase tracking-wider block mb-1 ${
+                      isCardHighlighted ? "text-purple-300" : isDarkTheme ? "text-purple-400" : "text-purple-800"
+                    }`}>
+                      Proyecto {proj.num}
+                    </span>
+                    <h3 className={`font-serif font-bold text-xl leading-tight mb-2 ${
+                      isCardHighlighted ? "text-white" : isDarkTheme ? "text-stone-100" : "text-stone-900"
+                    }`}>
+                      {proj.title}
+                    </h3>
+                    <p className={`text-sm mb-4 leading-relaxed transition-colors ${
+                      isCardHighlighted 
+                        ? "text-purple-200/80" 
+                        : isDarkTheme
+                          ? "text-stone-400"
+                          : "text-stone-605 text-stone-600"
+                    }`}>
+                      {proj.description}
+                    </p>
+                  </div>
+
+                  <div className={`pt-4 border-t ${isDarkTheme ? "border-stone-800" : "border-stone-200/30"}`}>
+                    <span className={`text-[10px] font-mono uppercase tracking-wider block mb-2 font-bold ${
+                      isCardHighlighted ? "text-fuchsia-305 text-fuchsia-300" : isDarkTheme ? "text-purple-400" : "text-purple-800"
+                    }`}>
+                      Qué vas a aprender:
+                    </span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {proj.tags.map((tag, tagIdx) => (
+                        <span
+                          key={tagIdx}
+                          className={`text-[11px] leading-tight px-2 py-1 rounded font-medium transition-colors duration-300 ${
+                            isCardHighlighted 
+                              ? "bg-purple-900/50 text-purple-200 border border-purple-800/40 group-hover:bg-purple-900/80" 
+                              : isDarkTheme
+                                ? "bg-stone-800/60 text-stone-300 border border-stone-800 group-hover:bg-purple-950/40 group-hover:text-purple-200 group-hover:border-purple-900/40"
+                                : "bg-stone-100/80 text-stone-700 border border-stone-200 group-hover:bg-purple-50 group-hover:text-purple-900 group-hover:border-purple-100"
+                          }`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </motion.div>

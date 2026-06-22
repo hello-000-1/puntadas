@@ -73,15 +73,24 @@ export default function Testimonials({ isDark = false }: TestimonialsProps) {
 
         {/* Testimonials Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {reviews.map((review) => (
+          {reviews.map((review, idx) => (
             <motion.div
               key={review.id}
+              initial={{ opacity: 0, y: 45 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 80, 
+                damping: 15,
+                delay: idx * 0.15
+              }}
               whileHover={{ 
                 y: -8, 
                 scale: 1.02, 
-                boxShadow: isDark ? "0 20px 25px -5px rgba(0,0,0,0.5)" : "0 20px 25px -5px rgba(107,33,168,0.06)"
+                boxShadow: isDark ? "0 20px 25px -5px rgba(0,0,0,0.5)" : "0 20px 25px -5px rgba(107,33,168,0.06)",
+                transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden group transition-colors duration-300 ${
                 isDark
                   ? "bg-stone-900 border-stone-850 hover:border-purple-800/60"

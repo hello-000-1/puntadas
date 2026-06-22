@@ -43,7 +43,7 @@ export default function FAQ({ isDark = false }: FAQProps) {
 
   return (
     <motion.section
-      className={`py-16 lg:py-24 border-t relative overflow-hidden transition-all duration-300 ${
+      className={`py-16 lg:py-24 relative overflow-hidden transition-all duration-300 ${
         isDark
           ? "bg-gradient-to-b from-stone-900 via-stone-950 to-stone-900 border-stone-850/80"
           : "bg-gradient-to-b from-stone-50 via-white to-stone-100 border-stone-200/50"

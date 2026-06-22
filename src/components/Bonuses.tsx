@@ -110,49 +110,56 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       badge: "BONO 1",
       title: "Cestos Personalizados",
       description: "Aprende a realizar cestos personalizados con patrones.",
-      icon: "cestos"
+      icon: "cestos",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/2.jpg"
     },
     {
       id: 2,
       badge: "BONO 2",
       title: "Forro Perfecto para Bolsos",
       description: "Aprende a colocar forro a tus bolsos con costura a mano o con máquina.",
-      icon: "forros"
+      icon: "forros",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/4.jpg"
     },
     {
       id: 3,
       badge: "BONO 3",
       title: "Directorio de Proveedores por País",
       description: "Te obsequiaré una lista de proveedores para que encuentres tu material en cualquier país en el que te encuentres.",
-      icon: "proveedores"
+      icon: "proveedores",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/7.jpg"
     },
     {
       id: 4,
       badge: "BONO 4",
       title: "Kit Imprimible de Agendas y Etiquetas",
       description: "Super kit de agendas crocheteras y etiquetas para personalizar tu pagaking.",
-      icon: "pagaking"
+      icon: "pagaking",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/5.jpg"
     },
     {
       id: 5,
       badge: "BONO 5",
       title: "Catálogo de 50 Patrones de Autor",
       description: "50 patrones exclusivos para diseñar bolsos y carteras, y diagramas explicativos paso a paso.",
-      icon: "patrones"
+      icon: "patrones",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/3.jpg"
     },
     {
       id: 6,
       badge: "BONO 6",
       title: "Taller de Costos y Precio Justo",
       description: "Aprende a sacar el precio justo de tus bolsos y carteras en crochet.",
-      icon: "precio"
+      icon: "precio",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/1.jpg"
     },
     {
       id: 7,
       badge: "BONO 7",
       title: "Comunidad VIP de Alumnas (Acceso Vitalicio)",
       description: "Comunidad de crocheteras, en donde podrás compartir tus proyectos y resolver dudas con la profesora y tus compañeras.",
-      icon: "comunidad"
+      icon: "comunidad",
+      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/6.jpg"
     }
   ];
 
@@ -207,77 +214,90 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
                 isDark={isDark}
                 className={
                   isDark
-                    ? "bg-stone-900/95 border-stone-800 p-6 sm:p-8 hover:border-purple-800/60 transition-colors duration-300 shadow-sm"
-                    : "bg-white border-stone-200 p-6 sm:p-8 hover:border-purple-300 transition-colors duration-300 shadow-sm"
+                    ? "bg-stone-900/95 border-stone-800 hover:border-purple-800/60 transition-colors duration-300 shadow-sm"
+                    : "bg-white border-stone-200 hover:border-purple-300 transition-colors duration-300 shadow-sm"
                 }
               >
-                {/* Decorative background gift tag */}
-                <span className={`absolute -top-3 -right-3 font-black text-6xl font-mono select-none pointer-events-none group-hover:scale-120 transition-all duration-300 z-0 ${
-                  isDark 
-                    ? "text-stone-800/35 group-hover:text-purple-900/35" 
-                    : "text-stone-100/40 group-hover:text-purple-200/30"
-                }`}>
-                  0{idx + 1}
-                </span>
-
-                <div className="space-y-4 z-10">
-                  {/* Icon Selection */}
-                  <div className="flex items-center justify-between">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-300 group-hover:scale-110 shadow-sm ${
-                      isDark
-                        ? "bg-stone-800 border-stone-705 text-purple-300"
-                        : "bg-purple-50 text-purple-800 border-purple-200 shadow-purple-500/5"
-                    }`}>
-                      {bonus.icon === "cestos" && <BookOpen className={`w-6 h-6 ${isDark ? "text-purple-300" : "text-purple-705 text-purple-705 text-purple-700"}`} />}
-                      {bonus.icon === "forros" && <Layers className="w-6 h-6" />}
-                      {bonus.icon === "proveedores" && <Globe className="w-6 h-6" />}
-                      {bonus.icon === "pagaking" && <ClipboardList className="w-6 h-6" />}
-                      {bonus.icon === "patrones" && <PenTool className="w-6 h-6" />}
-                      {bonus.icon === "precio" && <Calculator className="w-6 h-6" />}
-                      {bonus.icon === "comunidad" && <Users className="w-6 h-6" />}
-                    </div>
-
-                    <div className={`flex items-center gap-1 font-mono text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded border shadow-sm ${
-                      isDark
-                        ? "bg-purple-950 text-purple-300 border-purple-900/60"
-                        : "bg-purple-100/80 text-purple-950 border-purple-200/40"
-                    }`}>
-                      <Gift className={`w-3.5 h-3.5 animate-bounce ${isDark ? "text-purple-400" : "text-purple-700"}`} />
-                      <span>{bonus.badge}</span>
-                    </div>
-                  </div>
-
-                  {/* Text */}
-                  <div className="text-left">
-                    <span className={`text-xs tracking-wider font-mono font-bold uppercase block mb-1 ${
-                      isDark ? "text-purple-400" : "text-purple-800"
-                    }`}>
-                      {bonus.badge}
-                    </span>
-                    <h3 className={`font-serif font-bold text-lg leading-snug transition-colors ${
-                      isDark 
-                        ? "text-stone-100 group-hover:text-purple-350" 
-                        : "text-stone-900 group-hover:text-purple-900"
-                    }`}>
-                      {bonus.title}
-                    </h3>
-                    <p className={`text-sm mt-2 leading-relaxed transition-colors ${
-                      isDark ? "text-stone-300" : "text-stone-605 text-stone-600"
-                    }`}>
-                      {bonus.description}
-                    </p>
-                  </div>
+                {/* Product Image Wrapper */}
+                <div className="relative h-44 w-full overflow-hidden bg-stone-100 dark:bg-stone-800">
+                  <img
+                    src={bonus.image}
+                    alt={bonus.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Decorative background gift tag */}
+                  <span className={`absolute top-2 right-3 font-black text-4xl font-mono select-none pointer-events-none group-hover:scale-120 transition-all duration-300 z-10 ${
+                    isDark 
+                      ? "text-stone-800/35 group-hover:text-purple-900/35" 
+                      : "text-stone-100/40 group-hover:text-purple-200/30"
+                  }`}>
+                    0{idx + 1}
+                  </span>
+                  {/* Subtle edge overlay shadows */}
+                  <div className="absolute inset-0 bg-stone-900/10 mix-blend-multiply pointer-events-none" />
                 </div>
 
-                <div className={`pt-6 mt-6 border-t flex items-center gap-2 z-10 transition-colors ${
-                  isDark ? "border-stone-850" : "border-stone-100"
-                }`}>
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className={`text-[10px] sm:text-xs font-semibold uppercase tracking-widest font-mono ${
-                    isDark ? "text-green-400" : "text-green-700"
+                <div className="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+                  <div className="space-y-4 z-10">
+                    {/* Icon Selection */}
+                    <div className="flex items-center justify-between">
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center border transition-all duration-300 group-hover:scale-110 shadow-sm ${
+                        isDark
+                          ? "bg-stone-800 border-stone-705 text-purple-300"
+                          : "bg-purple-50 text-purple-800 border-purple-200 shadow-purple-500/5"
+                      }`}>
+                        {bonus.icon === "cestos" && <BookOpen className={`w-6 h-6 ${isDark ? "text-purple-300" : "text-purple-700"}`} />}
+                        {bonus.icon === "forros" && <Layers className="w-6 h-6" />}
+                        {bonus.icon === "proveedores" && <Globe className="w-6 h-6" />}
+                        {bonus.icon === "pagaking" && <ClipboardList className="w-6 h-6" />}
+                        {bonus.icon === "patrones" && <PenTool className="w-6 h-6" />}
+                        {bonus.icon === "precio" && <Calculator className="w-6 h-6" />}
+                        {bonus.icon === "comunidad" && <Users className="w-6 h-6" />}
+                      </div>
+
+                      <div className={`flex items-center gap-1 font-mono text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded border shadow-sm ${
+                        isDark
+                          ? "bg-purple-950 text-purple-300 border-purple-900/60"
+                          : "bg-purple-100/80 text-purple-950 border-purple-200/40"
+                      }`}>
+                        <Gift className={`w-3.5 h-3.5 animate-bounce ${isDark ? "text-purple-400" : "text-purple-700"}`} />
+                        <span>{bonus.badge}</span>
+                      </div>
+                    </div>
+
+                    {/* Text */}
+                    <div className="text-left">
+                      <span className={`text-xs tracking-wider font-mono font-bold uppercase block mb-1 ${
+                        isDark ? "text-purple-400" : "text-purple-800"
+                      }`}>
+                        {bonus.badge}
+                      </span>
+                      <h3 className={`font-serif font-bold text-lg leading-snug transition-colors ${
+                        isDark 
+                          ? "text-stone-100 group-hover:text-purple-350" 
+                          : "text-stone-900 group-hover:text-purple-900"
+                      }`}>
+                        {bonus.title}
+                      </h3>
+                      <p className={`text-sm mt-2 leading-relaxed transition-colors ${
+                        isDark ? "text-stone-300" : "text-stone-605 text-stone-600"
+                      }`}>
+                        {bonus.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className={`pt-6 mt-6 border-t flex items-center gap-2 z-10 transition-colors ${
+                    isDark ? "border-stone-850" : "border-stone-105"
                   }`}>
-                    100% Gratis hoy
-                  </span>
+                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                    <span className={`text-[10px] sm:text-xs font-semibold uppercase tracking-widest font-mono ${
+                      isDark ? "text-green-400" : "text-green-700"
+                    }`}>
+                      100% Gratis hoy
+                    </span>
+                  </div>
                 </div>
               </TiltCard>
             );

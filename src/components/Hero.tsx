@@ -118,8 +118,8 @@ export default function Hero({ onEnrollClick, isDark = false }: HeroProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8AVxSZZCkXRIxxROcGKZnSQDh5SGdttVgy-VGblwYQgHJG4yeYoHJEo&s=10?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8AVxSZZCkXRIxxROcGKZnSQDh5SGdttVgy-VGblwYQgHJG4yeYoHJEo&s=10?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
                   </div>
                   <span className={`text-xs font-medium ${isDark ? "text-stone-400" : "text-stone-500"}`}>Amado por <strong className={isDark ? "text-white" : "text-stone-900"}>1,400+ artesanas</strong></span>
