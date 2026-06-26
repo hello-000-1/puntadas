@@ -2,6 +2,7 @@ import React from "react";
 import { Star, Quote, Sparkles } from "lucide-react";
 import { Testimonial } from "../types";
 import { motion } from "motion/react";
+import { TESTIMONIAL_AVATARS } from "../constants/images";
 
 interface TestimonialsProps {
   isDark?: boolean;
@@ -16,7 +17,7 @@ export default function Testimonials({ isDark = false }: TestimonialsProps) {
       location: "San José, CA",
       rating: 5,
       text: "No tenía absolutamente ninguna experiencia en crochet antes de esto. Los videos de inicio hicieron que tejer con trapillo grueso fuera súper sencillo. ¡Tres meses después ya he vendido y enviado 18 bolsos clutch personalizados a clientes por Instagram! Mis amigas todavía no pueden creer que los teja yo misma.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150"
+      image: TESTIMONIAL_AVATARS.victoria
     },
     {
       id: 2,
@@ -25,7 +26,7 @@ export default function Testimonials({ isDark = false }: TestimonialsProps) {
       location: "Austin, TX",
       rating: 5,
       text: "El Módulo de Negocios por sí solo vale diez veces el precio del curso. Te da una plantilla de cálculo de precios a prueba de balas para calcular tus costos reales. Ahora compro trapillo directamente de distribuidores premium y gano $1,200 USD al mes trabajando desde mi casa en los ratos libres.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+      image: TESTIMONIAL_AVATARS.elena
     },
     {
       id: 3,
@@ -34,7 +35,7 @@ export default function Testimonials({ isDark = false }: TestimonialsProps) {
       location: "Miami, FL",
       rating: 5,
       text: "Saber tejer básico es una cosa, ¡pero la tensión del trapillo grueso es otra muy diferente! El truco para las 'Uniones de Círculo Invisibles' y la masterclass sobre cómo forrar a mano con lino fue un cambio total. Mis bolsos ahora lucen totalmente profesionales y de boutique fina.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150"
+      image: TESTIMONIAL_AVATARS.monica
     }
   ];
 

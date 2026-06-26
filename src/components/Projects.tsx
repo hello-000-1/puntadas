@@ -1,6 +1,7 @@
 import React from "react";
 import { Sparkles, ShoppingBag, Circle, Layers, Compass, Scissors, Award, Gem, Star } from "lucide-react";
 import { motion } from "motion/react";
+import { PROJECT_IMAGES } from "../constants/images";
 
 interface ProjectsProps {
   isDark?: boolean;
@@ -15,7 +16,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Materiales y herramientas", "Tejido lineal para carteras", "Tejido con punto espiga + accesorios"],
       icon: Layers,
       color: "bg-stone-50",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/44.jpg"
+      image: PROJECT_IMAGES.lineal
     },
     {
       num: "03",
@@ -24,7 +25,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Punto bajo centrado"],
       icon: Circle,
       color: "bg-purple-50/40",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/45.jpg"
+      image: PROJECT_IMAGES.redondo
     },
     {
       num: "04",
@@ -33,7 +34,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Bolso con accesorios y detalles", "Punto bajo centrado"],
       icon: Sparkles,
       color: "bg-fuchsia-50/40",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/46.jpg"
+      image: PROJECT_IMAGES.detalles
     },
     {
       num: "05 & 06",
@@ -42,7 +43,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Aumentos y disminuciones", "Punto bajo"],
       icon: Scissors,
       color: "bg-purple-50/20 select-none",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/47.jpg"
+      image: PROJECT_IMAGES.asimetrico
     },
     {
       num: "07",
@@ -51,7 +52,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Materiales y punto piña"],
       icon: Compass,
       color: "bg-purple-50/50",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/48.jpg"
+      image: PROJECT_IMAGES.cuero
     },
     {
       num: "08",
@@ -60,7 +61,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Bolso premium con accesorios", "Materiales y herramientas necesarias"],
       icon: Gem,
       color: "bg-stone-100",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/49.jpg"
+      image: PROJECT_IMAGES.premium_08
     },
     {
       num: "09",
@@ -69,7 +70,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Accesorios y cadenas", "Punto espiga con aumentos"],
       icon: ShoppingBag,
       color: "bg-purple-100/20",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/50.jpg"
+      image: PROJECT_IMAGES.profesional_09
     },
     {
       num: "10",
@@ -78,7 +79,7 @@ export default function Projects({ isDark: isDarkTheme = false }: ProjectsProps)
       tags: ["Cartera profesional con accesorios", "Cadenas", "Puntos básicos, aumentos y punto bajo centrado"],
       icon: Star,
       color: "bg-purple-950 text-purple-100 shadow-purple-500/20 border-purple-800",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2025/06/51-min.jpg"
+      image: PROJECT_IMAGES.accesorios_10
     }
   ];
 

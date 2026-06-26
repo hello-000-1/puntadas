@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Mail, Instagram, Facebook, Youtube, Shield, FileText, Send, Sparkles, Check } from "lucide-react";
+import { Mail, Instagram, Facebook, Shield, FileText, Send, Sparkles, Check } from "lucide-react";
+import { motion } from "motion/react";
 
 interface FooterProps {
   isDark?: boolean;
@@ -34,7 +35,7 @@ export default function Footer({ isDark = false }: FooterProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
           
           {/* Column 1: Organic brand logo & pitch */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center gap-2">
               <div className={`w-9 h-9 rounded-full flex items-center justify-center text-white font-bold transition-all ${
                 isDark ? "bg-purple-900 shadow-[0_0_8px_rgba(168,85,247,0.4)]" : "bg-amber-750"
@@ -57,17 +58,120 @@ export default function Footer({ isDark = false }: FooterProps) {
               Empoderamos a tejedoras de todo el mundo para dominar el arte del crochet de alta gama. Aprende a transformar trapillo continuo en bolsos estructurados de primer nivel y lanza tu propia tienda de diseño desde casa.
             </p>
 
-            <div className={`space-y-1.5 text-xs font-mono ${isDark ? "text-stone-500" : "text-stone-400"}`}>
+            <div className={`space-y-1.5 text-xs font-mono mb-4 ${isDark ? "text-stone-500" : "text-stone-400"}`}>
               <p className="flex items-center gap-2">
                 <Mail className={`w-4 h-4 flex-shrink-0 ${isDark ? "text-purple-400" : "text-amber-500"}`} />
                 <span className={isDark ? "text-stone-350" : "text-stone-200"}>support@trapillomasterclass.com</span>
               </p>
               <p>📍 Sede de la Academia, 44 Studio Row, Austin TX 78701</p>
             </div>
+
+            {/* Social media connections with 3D physical interactions */}
+            <div className="pt-4 space-y-2">
+              <span className="text-stone-500 text-[10px] uppercase font-mono tracking-widest block mb-2 font-bold">
+                ¡Síguenos en nuestras Redes Oficiales!:
+              </span>
+              <div className="flex flex-wrap gap-4 items-center">
+                
+                {/* 3D Instagram Button */}
+                <motion.a
+                  href="https://www.instagram.com/academy_trapillo?igsh=eTJqeXczMDJuenF0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative group flex items-center justify-center w-12 h-12 rounded-xl border text-stone-300 font-bold transition-all ${
+                    isDark 
+                      ? "bg-stone-900 border-stone-800 shadow-[0_4px_0_#444] hover:shadow-[0_8px_20px_rgba(219,39,119,0.3)]" 
+                      : "bg-white border-stone-200 shadow-[0_4px_0_#ddd] hover:shadow-[0_8px_16px_rgba(219,39,119,0.25)]"
+                  }`}
+                  style={{ transformStyle: "preserve-3d" }}
+                  whileHover={{ 
+                    y: -5,
+                    shadowOffset: 8,
+                    rotateX: 8,
+                    rotateY: -8,
+                    borderColor: "#db2777"
+                  }}
+                  whileTap={{ 
+                    y: 1,
+                    boxShadow: "0 1px 0 #444" 
+                  }}
+                  transition={{ type: "spring", stiffness: 350, damping: 15 }}
+                >
+                  <span className="absolute inset-0 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Instagram className="w-5 h-5 relative z-10 transition-colors duration-300 group-hover:text-white" />
+                </motion.a>
+
+                {/* 3D TikTok Button */}
+                <motion.a
+                  href="https://www.tiktok.com/@manualidades_aprende?_r=1&_t=ZS-97QQFmQdQEW"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative group flex items-center justify-center w-12 h-12 rounded-xl border text-stone-300 font-bold transition-all ${
+                    isDark 
+                      ? "bg-stone-900 border-stone-800 shadow-[0_4px_0_#444] hover:shadow-[0_8px_20px_rgba(0,0,0,0.6)]" 
+                      : "bg-white border-stone-200 shadow-[0_4px_0_#ddd] hover:shadow-[0_8px_16px_rgba(0,242,254,0.2)]"
+                  }`}
+                  style={{ transformStyle: "preserve-3d" }}
+                  whileHover={{ 
+                    y: -5,
+                    rotateX: 8,
+                    rotateY: 8,
+                    borderColor: "#01f2fe"
+                  }}
+                  whileTap={{ 
+                    y: 1,
+                    boxShadow: "0 1px 0 #444" 
+                  }}
+                  transition={{ type: "spring", stiffness: 350, damping: 15 }}
+                >
+                  <span className="absolute inset-0 rounded-xl bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-transparent group-hover:shadow-[2px_2px_0px_#00f2fe,-2px_-2px_0px_#fe0979]" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 relative z-10 transition-colors duration-300 group-hover:text-white"
+                  >
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                  </svg>
+                </motion.a>
+
+                {/* 3D Facebook Button */}
+                <motion.a
+                  href="https://www.facebook.com/share/1EC24aGGBJ/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative group flex items-center justify-center w-12 h-12 rounded-xl border text-stone-300 font-bold transition-all ${
+                    isDark 
+                      ? "bg-stone-900 border-stone-800 shadow-[0_4px_0_#444] hover:shadow-[0_8px_20px_rgba(24,119,242,0.3)]" 
+                      : "bg-white border-stone-200 shadow-[0_4px_0_#ddd] hover:shadow-[0_8px_16px_rgba(24,119,242,0.25)]"
+                  }`}
+                  style={{ transformStyle: "preserve-3d" }}
+                  whileHover={{ 
+                    y: -5,
+                    rotateX: -8,
+                    rotateY: -8,
+                    borderColor: "#1877f2"
+                  }}
+                  whileTap={{ 
+                    y: 1,
+                    boxShadow: "0 1px 0 #444" 
+                  }}
+                  transition={{ type: "spring", stiffness: 350, damping: 15 }}
+                >
+                  <span className="absolute inset-0 rounded-xl bg-[#1877F2] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Facebook className="w-5 h-5 relative z-10 transition-colors duration-300 group-hover:text-white" />
+                </motion.a>
+
+              </div>
+            </div>
           </div>
 
           {/* Column 2: Quick scroll shortcuts */}
-          <div className="lg:col-span-3 space-y-4">
+          <div className="lg:col-span-6 space-y-4">
             <h4 className={`font-serif font-bold text-sm uppercase tracking-wider transition-colors ${
               isDark ? "text-purple-400" : "text-amber-500"
             }`}>
@@ -94,74 +198,6 @@ export default function Footer({ isDark = false }: FooterProps) {
                   {link.name}
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Column 3: Newsletter Sign-up */}
-          <div className="lg:col-span-5 space-y-4">
-            <h4 className={`font-serif font-bold text-sm uppercase tracking-wider flex items-center gap-1.5 transition-colors ${
-              isDark ? "text-purple-400" : "text-amber-500"
-            }`}>
-              <Sparkles className="w-4 h-4 animate-pulse" />
-              <span>Miniguía de Puntos Gratuita (PDF)</span>
-            </h4>
-            <p className={`text-xs leading-relaxed ${isDark ? "text-stone-400" : "text-stone-300"}`}>
-              Suscríbete a nuestro boletín de artesanas para recibir inmediatamente un PDF descargable paso a paso sobre 3 bordes decorativos modernos para tus bolsos.
-            </p>
-
-            {subscribed ? (
-              <div className={`border rounded-lg p-3.5 flex items-center gap-2.5 text-xs transition-colors ${
-                isDark 
-                  ? "bg-purple-950/30 border-purple-900/60 text-purple-300" 
-                  : "bg-amber-950/40 border-amber-800/40 text-amber-300"
-              }`}>
-                <Check className={`w-4 h-4 flex-shrink-0 ${isDark ? "text-purple-400" : "text-green-500"}`} />
-                <span>¡Revisa tu bandeja! Te hemos enviado tu guía PDF gratuita sobre bordes decorativos.</span>
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2">
-                <input
-                  type="email"
-                  required
-                  placeholder="Ingresa tu correo electrónico..."
-                  value={emailInput}
-                  onChange={(e) => setEmailInput(e.target.value)}
-                  className={`rounded px-3 py-2 text-xs flex-grow focus:outline-none transition-colors ${
-                    isDark 
-                      ? "bg-stone-900 border border-stone-800 text-white focus:border-purple-600" 
-                      : "bg-stone-850 border border-stone-700/60 text-white focus:border-amber-700"
-                  }`}
-                />
-                <button
-                  type="submit"
-                  className={`text-stone-50 text-xs font-bold px-4 py-2 rounded transition-all flex items-center gap-1 cursor-pointer hover:scale-102 active:scale-98 ${
-                    isDark ? "bg-purple-800 hover:bg-purple-900 shadow-sm" : "bg-amber-700 hover:bg-amber-800"
-                  }`}
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Unirse</span>
-                </button>
-              </form>
-            )}
-
-            {/* Social media connections */}
-            <div className="pt-3 flex items-center gap-3">
-              <span className="text-stone-500 text-[10px] uppercase font-mono tracking-widest block mr-2">Síguenos:</span>
-              <a href="#footer" className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                isDark ? "bg-stone-900 text-stone-400 hover:text-purple-300 hover:bg-stone-800" : "bg-stone-800 text-stone-400 hover:text-white hover:bg-stone-700"
-              }`}>
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#footer" className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                isDark ? "bg-stone-900 text-stone-400 hover:text-purple-350 hover:bg-stone-800" : "bg-stone-800 text-stone-400 hover:text-white hover:bg-stone-700"
-              }`}>
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#footer" className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                isDark ? "bg-stone-900 text-stone-400 hover:text-purple-350 hover:bg-stone-800" : "bg-stone-800 text-stone-400 hover:text-white hover:bg-stone-700"
-              }`}>
-                <Youtube className="w-4 h-4" />
-              </a>
             </div>
           </div>
 

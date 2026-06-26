@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { BookOpen, Layers, Globe, ClipboardList, PenTool, Calculator, Users, Gift, Sparkles } from "lucide-react";
 import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
+import { BONUS_IMAGES } from "../constants/images";
 
 interface TiltCardProps {
   children: React.ReactNode;
@@ -111,7 +112,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Cestos Personalizados",
       description: "Aprende a realizar cestos personalizados con patrones.",
       icon: "cestos",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/2.jpg"
+      image: BONUS_IMAGES.bono1
     },
     {
       id: 2,
@@ -119,7 +120,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Forro Perfecto para Bolsos",
       description: "Aprende a colocar forro a tus bolsos con costura a mano o con máquina.",
       icon: "forros",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/4.jpg"
+      image: BONUS_IMAGES.bono2
     },
     {
       id: 3,
@@ -127,7 +128,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Directorio de Proveedores por País",
       description: "Te obsequiaré una lista de proveedores para que encuentres tu material en cualquier país en el que te encuentres.",
       icon: "proveedores",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/7.jpg"
+      image: BONUS_IMAGES.bono3
     },
     {
       id: 4,
@@ -135,7 +136,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Kit Imprimible de Agendas y Etiquetas",
       description: "Super kit de agendas crocheteras y etiquetas para personalizar tu pagaking.",
       icon: "pagaking",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/5.jpg"
+      image: BONUS_IMAGES.bono4
     },
     {
       id: 5,
@@ -143,7 +144,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Catálogo de 50 Patrones de Autor",
       description: "50 patrones exclusivos para diseñar bolsos y carteras, y diagramas explicativos paso a paso.",
       icon: "patrones",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/3.jpg"
+      image: BONUS_IMAGES.bono5
     },
     {
       id: 6,
@@ -151,7 +152,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Taller de Costos y Precio Justo",
       description: "Aprende a sacar el precio justo de tus bolsos y carteras en crochet.",
       icon: "precio",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/1.jpg"
+      image: BONUS_IMAGES.bono6
     },
     {
       id: 7,
@@ -159,7 +160,7 @@ export default function Bonuses({ isDark = false }: BonusesProps) {
       title: "Comunidad VIP de Alumnas (Acceso Vitalicio)",
       description: "Comunidad de crocheteras, en donde podrás compartir tus proyectos y resolver dudas con la profesora y tus compañeras.",
       icon: "comunidad",
-      image: "https://academyclasscursosonline.com/wp-content/uploads/2026/04/6.jpg"
+      image: BONUS_IMAGES.bono7
     }
   ];
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Sparkles, GraduationCap, Briefcase, Star } from "lucide-react";
 import { motion } from "motion/react";
+import { HERO_IMAGE, SOCIAL_PROOF_AVATARS } from "../constants/images";
 
 interface HeroProps {
   onEnrollClick: () => void;
@@ -25,16 +26,6 @@ export default function Hero({ onEnrollClick, isDark = false }: HeroProps) {
           
           {/* Left Side Content & Marketing Pitch Column */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
-            
-            {/* Organic Premium Pill Header Badge */}
-            <div className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-mono font-bold uppercase tracking-wider shadow-sm transition-colors ${
-              isDark
-                ? "bg-purple-950/50 border-purple-800/40 text-purple-300"
-                : "bg-purple-50 border-purple-200 text-purple-800"
-            }`}>
-              <Sparkles className="w-3.5 h-3.5 animate-pulse text-purple-500" />
-              <span>CUPOS ABIERTOS • COMPLETO DESDE CASA</span>
-            </div>
 
             {/* Powerful emotional title */}
             <h1 className={`font-serif text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none transition-colors ${
@@ -118,9 +109,9 @@ export default function Hero({ onEnrollClick, isDark = false }: HeroProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8AVxSZZCkXRIxxROcGKZnSQDh5SGdttVgy-VGblwYQgHJG4yeYoHJEo&s=10?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL8AVxSZZCkXRIxxROcGKZnSQDh5SGdttVgy-VGblwYQgHJG4yeYoHJEo&s=10?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
+                    <img src={SOCIAL_PROOF_AVATARS[0]} className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
+                    <img src={SOCIAL_PROOF_AVATARS[1]} className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
+                    <img src={SOCIAL_PROOF_AVATARS[2]} className="w-6 h-6 rounded-full border border-white" referrerPolicy="no-referrer" />
                   </div>
                   <span className={`text-xs font-medium ${isDark ? "text-stone-400" : "text-stone-500"}`}>Amado por <strong className={isDark ? "text-white" : "text-stone-900"}>1,400+ artesanas</strong></span>
                 </div>
@@ -148,7 +139,7 @@ export default function Hero({ onEnrollClick, isDark = false }: HeroProps) {
               isDark ? "border-stone-900" : "border-white"
             }`}>
               <img
-                src="/src/assets/images/trapillo_hero_1781988462809.jpg"
+                src={HERO_IMAGE}
                 alt="Elite Handmade Trapillo Crochet Bags Catalog Display"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

@@ -101,15 +101,19 @@ export default function FAQ({ isDark = false }: FAQProps) {
                   }`}
                 >
                   <span className="pr-4">{faq.question}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
-                    isOpen 
-                      ? isDark ? "bg-purple-900 text-purple-200" : "bg-amber-100 text-amber-800" 
-                      : isDark
-                        ? "bg-stone-800 text-stone-300 group-hover:bg-purple-950 group-hover:text-purple-300"
-                        : "bg-stone-100 text-stone-500 group-hover:bg-amber-50 group-hover:text-amber-800"
-                  }`}>
+                  <motion.div 
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors flex-shrink-0 ${
+                      isOpen 
+                        ? isDark ? "bg-purple-900 text-purple-200" : "bg-amber-100 text-amber-800" 
+                        : isDark
+                          ? "bg-stone-800 text-stone-300 group-hover:bg-purple-950 group-hover:text-purple-300"
+                          : "bg-stone-100 text-stone-500 group-hover:bg-amber-50 group-hover:text-amber-800"
+                    }`}
+                  >
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                  </div>
+                  </motion.div>
                 </button>
 
                 <AnimatePresence initial={false}>
@@ -118,14 +122,22 @@ export default function FAQ({ isDark = false }: FAQProps) {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.35, ease: [0.04, 0.62, 0.23, 0.98] }}
+                      className="overflow-hidden"
                     >
-                      <div className={`px-5 pb-5 pt-1 text-sm sm:text-base leading-relaxed border-t transition-colors ${
+                      <div className={`px-5 pb-5 pt-3 text-sm sm:text-base leading-relaxed border-t transition-colors ${
                         isDark
                           ? "text-stone-300 border-stone-850 bg-stone-900/10"
                           : "text-stone-605 text-stone-600 border-stone-100/60 bg-amber-50/10"
                       }`}>
-                        {faq.answer}
+                        <motion.div
+                          initial={{ y: -8, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: -8, opacity: 0 }}
+                          transition={{ duration: 0.25, ease: "easeOut" }}
+                        >
+                          {faq.answer}
+                        </motion.div>
                       </div>
                     </motion.div>
                   )}

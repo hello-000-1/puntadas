@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BookOpen, Calendar, CircleHelp, Plus, Minus, Award, ThumbsUp, Scissors } from "lucide-react";
 import { SyllabusModule } from "../types";
 import { motion, AnimatePresence } from "motion/react";
+import { PLAN_ESTUDIOS_DETAIL_IMAGE } from "../constants/images";
 
 interface CourseDescriptionProps {
   isDark?: boolean;
@@ -78,7 +79,7 @@ export default function CourseDescription({ isDark = false }: CourseDescriptionP
               isDark ? "border-stone-800 bg-stone-900" : "border-stone-250 bg-stone-50"
             }`}>
               <img
-                src="/src/assets/images/trapillo_detail_1781988475428.jpg"
+                src={PLAN_ESTUDIOS_DETAIL_IMAGE}
                 alt="Trapillo crochet luxury workspace setup details and materials"
                 className="w-full h-auto object-cover max-h-[350px] group-hover:scale-102 transition-transform duration-700"
                 referrerPolicy="no-referrer"
